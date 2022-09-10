@@ -4,6 +4,17 @@
 <head>
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script>
+	function script()
+	{
+	document.getElementById("recipientName").textContent=document.querySelector('input[name=recipientName]').value;
+	document.getElementById("organizationName").textContent=document.querySelector('input[name=organizationName]').value;
+	document.getElementById("eventDate").textContent=document.querySelector('input[name=eventDate]').value;
+	document.getElementById("websiteURL").textContent=document.querySelector('input[name=websiteURL]').value;
+	document.getElementById("hostName").textContent=document.querySelector('input[name=hostName]').value;
+	return false;
+	}
+	</script>
 </head>
 
 <body>
@@ -26,7 +37,7 @@
         </nav>
     </header>
     <section id="pageForm">
-        <form action="#">
+        <form action="#" onsubmit="return script();">
             <label for="recipientName">Recipient name:</label>
             <input type="text" name="recipientName" placeholder="Enter your Recipient Name" />
 
